@@ -17,6 +17,10 @@ export const handler: Handlers = {
       `https://videoapp-api.deno.dev/videos/${ctx.state.id}`,
     );
     if (res.status !== 200) {
+      return new Response("", {
+        status: 303,
+        headers: { location: "/login" },
+      });
     }
 
     const data = await res.json();

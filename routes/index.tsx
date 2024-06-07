@@ -3,7 +3,7 @@ export const handler: Handlers = {
   GET: async () => {
     return new Response(null, {
       status: 303,
-      headers: { location: "/login" },
+      headers: { location: "/videos" },
     });
   },
 };
