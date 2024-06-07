@@ -1,3 +1,13 @@
+import { Handlers } from "$fresh/server.ts";
+export const handler: Handlers = {
+  GET: async () => {
+    return new Response(null, {
+      status: 303,
+      headers: { location: "/login" },
+    });
+  },
+};
+
 export default function Home() {
   return (
     <div>
